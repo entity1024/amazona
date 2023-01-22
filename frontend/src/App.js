@@ -4,7 +4,7 @@ function App() {
       <header>
         <a href="/">Amazona</a>
       </header>
-      <main>list products / lista de productos</main>
+      <main>list products / Desde Visual Studio Code</main>
     </div>
   );
 }
