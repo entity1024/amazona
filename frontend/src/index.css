@@ -19,11 +19,6 @@ main {
   color: #ffc000;
 }
 
-.btn-primary {
-  background-color: #f0c040 !important;
-  color: black;
-}
-
 .products {
   display: flex;
   flex-wrap: wrap;
@@ -46,4 +41,12 @@ main {
 
 .img-large {
   max-width: 100%;
+}
+
+.img-thumbnail {
+  height: 80px;
+}
+
+.small-container {
+  max-width: 600px !important;
 }
