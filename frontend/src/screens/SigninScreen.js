@@ -19,11 +19,11 @@ function SigninScreen() {
       <Form>
         <Form.Group className="mb-3" controlId="email">
           <Form.Label>Email</Form.Label>
-          <Form.Control type="email" />
+          <Form.Control required type="email" />
         </Form.Group>
         <Form.Group className="mb-3" controlId="password">
           <Form.Label>Password</Form.Label>
-          <Form.Control type="password" />
+          <Form.Control required type="password" />
         </Form.Group>
         <div className="mb-3">
           <Button variant="warning" type="submit">
