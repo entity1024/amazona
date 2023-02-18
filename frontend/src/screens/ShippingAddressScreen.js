@@ -55,7 +55,7 @@ export default function ShippingAddressScreen() {
       })
     );
 
-    navigate('payment');
+    navigate('/payment');
   };
 
   return (
