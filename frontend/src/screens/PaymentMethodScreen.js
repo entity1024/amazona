@@ -9,15 +9,17 @@ import { Store } from '../Store';
 export default function PaymentMethodScreen() {
   const navigate = useNavigate();
   const { state, dispatch: ctxDispatch } = useContext(Store);
+  //console.log(state);
   const {
-    cart: { shippingAddress, paymentMethod },
+    cart: { shippingAddress, paymentMethod, cartItems },
   } = state;
 
   useEffect(() => {
+    //console.log(cartItems);
     if (!shippingAddress.address) {
       navigate('/shipping');
     }
-  }, [shippingAddress, navigate]);
+  }, [shippingAddress, cartItems, navigate]);
 
   const [paymentMethodName, setPaymentMethod] = useState(
     paymentMethod || 'PayPal'
@@ -25,8 +27,10 @@ export default function PaymentMethodScreen() {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    ctxDispatch({ type: 'SAVE_PAYMENT-METHOD', payload: paymentMethodName });
+    ctxDispatch({ type: 'SAVE_PAYMENT_METHOD', payload: paymentMethodName });
     localStorage.setItem('paymentMethod', paymentMethodName);
+
+    console.log(state);
     navigate('/placeorder');
   };
 
